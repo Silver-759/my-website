@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>My website</title>
+    </head>
+        <style>
+            body {
+                background-color: lightgoldenrodyellow;
+            }
+            h1 {
+                font-family: Verdana;
+                font-size: 24px;
+                text-align: center;
+            }
+            p {
+                font-family: Verdana;
+                font-size: 14px;
+                text-align: center;
+            }
+            img {
+                max-width: 1000px;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+            }
+            #slider-container {
+                position: fixed;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: lightgoldenrodyellow;
+                padding: 10px;
+                border-radius: 10px;
+            }
+
+        </style>
+    <body>
+        <h1>I made a website again</h1>
+        <p>Here's a fact: Grant's Zebra is the smallest of the seven subspecies of the plains zebra. This subspecies represents the zebra form of the Serengeti-Mara ecosystem and others across central Africa</p>
+        <img id="zebraImage" src="a_zebra.jpg" alt="A zebra">
+        <p>    
+            <a href="https://en.wikipedia.org/wiki/Grant%27s_zebra" target="_blank">
+                For more information click this link:
+            </a>
+        </p>
+        <div id="slider-container">
+            <label for="sizeSlider">Resize zebra:</label><br>
+            <input type="range" id="sizeSlider" min="100" max="1000" value="400">
+        </div>
+        <script>
+            const slider = document.getElementById('sizeSlider');
+            const zebraImage = document.getElementById('zebraImage');
+
+            slider.addEventListener('input', () => {
+                zebraImage.style.width = slider.value + 'px';
+            });
+            console.log("WHAT ARE YOU DOING HERE???");
+            console.log("You know this place exists?");
+            console.log("zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra zebra");
+        </script>
+    </body>
+</html>
